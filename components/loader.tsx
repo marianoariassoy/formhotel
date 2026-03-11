@@ -1,0 +1,22 @@
+const Loader = () => {
+  return (
+    <div className="h-full py-4 w-full flex justify-center items-center">
+      <div className="flex justify-center items-center space-x-2">
+        <div
+          className="w-4 h-4 bg-blue rounded-full animate-bounce"
+          style={{ animationDelay: "0s" }}
+        ></div>
+        <div
+          className="w-4 h-4 bg-green rounded-full animate-bounce"
+          style={{ animationDelay: ".3s" }}
+        ></div>
+        <div
+          className="w-4 h-4 bg-brown rounded-full animate-bounce"
+          style={{ animationDelay: ".6s" }}
+        ></div>
+      </div>
+    </div>
+  );
+};
+
+export default Loader;
