@@ -14,6 +14,7 @@ const Hero = () => {
         muted
         loop
         playsInline
+        poster="/images/habitaciones-hero.jpg"
         preload="metadata"
         className="absolute top-0 left-0 w-full h-full object-cover fade-in"
       >

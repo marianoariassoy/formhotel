@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   description:
     "28 habitaciones prolijamente decoradas. Flexibles y adaptables para transformarlas en habitaciones single, dobles o triples. 60 plazas disponibles aproximadamente Categoria 3 estrellas asignada por el Ministerio de Turismo de la Provincia de Buenos Aires",
   icons: {
-    icon: "",
-    shortcut: "",
-    apple: "",
+    icon: "/images/favicon.jpg",
+    shortcut: "/images/favicon.jpg",
+    apple: "/images/favicon.jpg",
   },
   openGraph: {
     type: "website",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
       "28 habitaciones prolijamente decoradas. Flexibles y adaptables para transformarlas en habitaciones single, dobles o triples. 60 plazas disponibles aproximadamente Categoria 3 estrellas asignada por el Ministerio de Turismo de la Provincia de Buenos Aires",
     images: [
       {
-        url: "",
-        width: 500,
-        height: 500,
+        url: "/images/hero.jpg",
+        width: 800,
+        height: 800,
         alt: "Form Hotel",
       },
     ],
