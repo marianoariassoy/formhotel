@@ -31,7 +31,7 @@ const Servicios = () => {
         <div
           className={`z-10 relative opacity-0 ${inView ? "animate-fade-right" : ""}`}
         >
-          <h1 className="text-xl lg:text-4xl uppercase font-semibold border-l-2 border-r-2 px-12 border-white inline tracking-widest text-white">
+          <h1 className="text-xl lg:text-3xl uppercase border-l-2 border-r-2 px-12 border-white inline tracking-widest text-white">
             Servicios
           </h1>
         </div>
@@ -49,7 +49,7 @@ const Servicios = () => {
         <div
           className={`lg:w-3/5 flex flex-col opacity-0 ${inView2 ? "animate-fade-left" : ""}`}
         >
-          <div className="flex flex-col gap-y-8 px-4 lg:px-20 py-8 lg:py-20">
+          <div className="flex flex-col gap-y-8 px-4 lg:px-20 py-8 lg:py-20 text-sm">
             <h2 className="font-bold tracking-widest">
               OFRECEMOS SERVICIO DE ALMUERZO O CENA CON MENÚ DE 3 PASOS BEBIDA
               SIN ALCOHOL . INCLUYE ENTRADA, PLATO PRINCIPAL, POSTRE.

@@ -35,14 +35,12 @@ const Nav = ({ handleScroll, setMenuOpen, menuOpen }: Props) => {
                 </li>
               ))}
             </ul>
-            <a
-              href="http://"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white bg-primary p-3 text-sm font-medium uppercase hover:bg-black/80 transition-colors"
+            <button
+              className="text-white bg-primary p-3 text-xs font-medium uppercase hover:bg-black/80 transition-colors cursor-pointer"
+              onClick={() => handleScroll("form")}
             >
               Reservas
-            </a>
+            </button>
           </nav>
         </div>
       )}

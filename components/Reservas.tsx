@@ -12,12 +12,12 @@ const Reservas = () => {
     <section className="bg-primary text-white" id="reservas" ref={ref}>
       <Container styles="py-20 flex flex-col items-start lg:flex-row gap-x-20 gap-y-8">
         <div className={`opacity-0 ${inView ? "animate-fade-right" : ""}`}>
-          <h1 className="px-8 py-6 border border-white text-semibold text-xl lg:text-3xl tracking-widest uppercase">
+          <h1 className="px-8 py-6 border border-white text-semibold text-xl lg:text-2xl tracking-widest uppercase">
             Reservas
           </h1>
         </div>
         <div
-          className={`opacity-0 flex flex-col gap-y-2 ${inView ? "animate-fade-left" : ""}`}
+          className={`opacity-0 text-sm flex flex-col gap-y-2 ${inView ? "animate-fade-left" : ""}`}
         >
           <p>28 habitaciones prolijamente decoradas.</p>
           <p>

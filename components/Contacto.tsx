@@ -13,19 +13,19 @@ const Contacto = () => {
       id="contacto"
       ref={ref}
     >
-      <div className="flex justify-end">
+      <div className="flex justify-end text-sm">
         <div
           className={`px-4 opacity-0 lg:px-0 py-20 w-full max-w-124 flex flex-col items-start gap-y-8 lg:pr-12 ${inView ? "animate-fade-right" : ""}`}
         >
           <h1 className="text-xl lg:text-4xl uppercase font-semibold border-l-2 border-r-2 px-12 border-white tracking-widest inline mb-8">
             Contacto
           </h1>
-          <h2 className="font-bold tracking-widest text-sm lg:text-base">
+          <h2 className="font-bold tracking-widest">
             INFORMAMOS ADEMÁS QUE ANTE NECESIDADES ESPECIALES O CUALQUIER
             SOLICITUD ADICIONAL QUE REQUIERAN, PUEDEN COMUNICARSE DIRECTAMENTE
             CON:
           </h2>
-          <div className="flex flex-col gap-y-4 text-sm">
+          <div className="flex flex-col gap-y-4">
             <div>
               <h3 className="font-bold">MARCELO EL SHAMI</h3>
               Gerente - Contador
@@ -101,7 +101,7 @@ const Contacto = () => {
                   </svg>
                 </div>
 
-                <p className="uppercase tracking-wider">Zarate</p>
+                <p>Ituzaingó 856, Zarate. Pcia. de Bs. As.</p>
               </li>
             </ul>
           </div>

@@ -76,19 +76,19 @@ const Form = () => {
     <section id="form" ref={ref}>
       <Container styles="py-20 flex flex-col lg:items-center gap-y-20">
         <div className={`opacity-0 ${inView ? "animate-fade-right" : ""}`}>
-          <h1 className="px-8 py-6 border border-primary text-semibold text-xl lg:text-3xl tracking-widest uppercase inline">
+          <h1 className="px-8 py-6 border border-primary text-semibold text-xl lg:text-2xl tracking-widest uppercase inline">
             Reservas / Consultas
           </h1>
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className={`flex flex-col gap-y-4 w-full max-w-3xl mx-auto ${inView ? "animate-fade-right" : ""}`}
+          className={`flex flex-col gap-y-4 w-full max-w-2xl text-sm mx-auto ${inView ? "animate-fade-right" : ""}`}
         >
-          <div className="flex flex-col lg:flex-row gap-2">
-            <div className="uppercase font-bold text-sm lg:text-base tracking-widest w-1/3">
+          <div className="flex flex-col gap-2">
+            <div className="uppercase font-bold tracking-widest w-1/3">
               Nombre
             </div>
-            <div className="lg:w-2/3">
+            <div>
               <Input
                 type="text"
                 placeholder=""
@@ -97,11 +97,11 @@ const Form = () => {
               <Error error={errors.name} />
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row gap-2">
-            <div className="uppercase font-bold text-sm lg:text-base tracking-widest w-1/3">
+          <div className="flex flex-col gap-2">
+            <div className="uppercase font-bold tracking-widest w-1/3">
               Mail
             </div>
-            <div className="lg:w-2/3">
+            <div>
               <Input
                 type="email"
                 placeholder=""
@@ -117,11 +117,11 @@ const Form = () => {
               <Error error={errors.email} />
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row gap-2">
-            <div className="uppercase font-bold text-sm lg:text-base tracking-widest w-1/3">
+          <div className="flex flex-col gap-2">
+            <div className="uppercase font-bold tracking-widest w-1/3">
               Teléfono
             </div>
-            <div className="lg:w-2/3">
+            <div>
               <Input
                 type="text"
                 placeholder=""
@@ -133,11 +133,11 @@ const Form = () => {
               <Error error={errors.phone} />
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row gap-2">
-            <div className="uppercase font-bold text-sm lg:text-base tracking-widest w-1/3">
+          <div className="flex flex-col gap-2">
+            <div className="uppercase font-bold  tracking-widest w-1/3">
               Mensaje
             </div>
-            <div className="lg:w-2/3">
+            <div>
               <textarea
                 className="h-30 border border-primary px-6 py-4 focus:outline-none focus:ring-0 w-full"
                 placeholder=""
@@ -151,7 +151,7 @@ const Form = () => {
             {sending ? (
               <Loader />
             ) : (
-              <button className="uppercase font-medium tracking-widest text-sm lg:text-base bg-primary text-white px-6 py-4 hover:bg-black/80 transition-colors cursor-pointer">
+              <button className="uppercase font-medium tracking-widest  bg-primary text-white px-6 py-4 hover:bg-black/80 transition-colors cursor-pointer">
                 Enviar
               </button>
             )}

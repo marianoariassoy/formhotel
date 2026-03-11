@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed transition-all top-0 w-full z-40 text-white animate-fade-down ${isScrolled ? "py-4  bg-linear-to-b from-primary to-transparent" : "py-8"}`}
+        className={`fixed transition-all bg-linear-to-b top-0 w-full z-40 text-white animate-fade-down ${isScrolled ? "py-4   from-primary to-primary/50" : "py-8"}`}
       >
         <Container
           styles={`flex gap-x-4 items-center transition-all justify-between`}

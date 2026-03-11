@@ -24,7 +24,7 @@ const Habitaciones = () => {
         <div
           className={`z-20 relative opacity-0 ${inView ? "animate-fade-right" : ""}`}
         >
-          <h1 className="text-xl lg:text-4xl uppercase font-semibold text-white border-l-2 border-r-2 px-12 border-white inline tracking-widest ">
+          <h1 className="text-xl lg:text-3xl uppercase text-white border-l-2 border-r-2 px-12 border-white inline tracking-widest ">
             Habitaciones
           </h1>
         </div>
@@ -51,13 +51,13 @@ const Habitaciones = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              className="h-20"
+              className="h-18"
               viewBox="0 0 640 640"
             >
               <path d="M280 128C266.7 128 256 138.7 256 152C256 165.3 266.7 176 280 176L296 176L296 209.3C188.8 220.7 104.2 307.7 96.6 416L543.5 416C535.8 307.7 451.2 220.7 344 209.3L344 176L360 176C373.3 176 384 165.3 384 152C384 138.7 373.3 128 360 128L280 128zM88 464C74.7 464 64 474.7 64 488C64 501.3 74.7 512 88 512L552 512C565.3 512 576 501.3 576 488C576 474.7 565.3 464 552 464L88 464z" />
             </svg>
           </span>
-          <h2 className="font-bold tracking-widest">
+          <h2 className="font-bold tracking-widest text-sm">
             NUESTRAS HABITACIONES, CON DISTINTAS CATEGORIAS, CUENTAS CON LOS
             SIGUIENTES SERVICIOS:
           </h2>
