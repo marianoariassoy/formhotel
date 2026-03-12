@@ -26,12 +26,24 @@ const Nav = ({ handleScroll, setMenuOpen, menuOpen }: Props) => {
           <nav
             className={` absolute flex flex-col gap-y-8 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 `}
           >
-            <ul className="flex flex-col items-center gap-y-6 uppercase font-medium text-white">
+            <ul className="flex flex-col items-center gap-y-6 font-medium text-white">
               {menu.map((item) => (
                 <li key={item.name}>
-                  <button onClick={() => handleScroll(item.name.toLowerCase())}>
-                    {item.name}
-                  </button>
+                  {item.name === "Ubicación" ? (
+                    <a
+                      href="https://maps.app.goo.gl/Z1R2GZamCczbqsyn8"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <button
+                      onClick={() => handleScroll(item.name.toLowerCase())}
+                    >
+                      {item.name}
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>
