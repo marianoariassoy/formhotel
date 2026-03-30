@@ -44,14 +44,17 @@ const Form = () => {
   const onSubmit: SubmitHandler<Form> = async (data) => {
     setSending(true);
     const sender = {
-      to: "info@alfajoresguaymallen.com.ar",
-      from: "no-reply@alfajoresguaymallen.com.ar",
-      from_name: "Alfajores Guaymallen",
+      to: "info@formhotel.com.ar",
+      from: "no-reply@formhotel.com.ar",
+      from_name: "Form Hotel",
       subject: "Contacto",
     };
 
     try {
-      const response = await axios.post("", { ...data, ...sender });
+      const response = await axios.post(
+        "https://formhotel.com.ar/backend/send-email.php",
+        { ...data, ...sender },
+      );
       if (response?.data?.error) {
         setError(response.data.message);
         setSending(false);
@@ -71,6 +74,22 @@ const Form = () => {
   };
 
   const errorMessage = "Completa este dato por favor.";
+
+  if (sended) {
+    return (
+      <section id="form" ref={ref}>
+        <Container styles="py-20 flex flex-col lg:items-center gap-y-20">
+          <h1 className="px-8 py-6 border border-primary text-semibold text-xl lg:text-2xl tracking-widest uppercase inline">
+            Reservas / Consultas
+          </h1>
+          <div className="text-lg text-center mb-8">
+            ¡Gracias por contactarse con nosotros! <br /> Te responderemos lo
+            antes posible.
+          </div>
+        </Container>
+      </section>
+    );
+  }
 
   return (
     <section id="form" ref={ref}>
@@ -152,7 +171,7 @@ const Form = () => {
               <Loader />
             ) : (
               <button className="uppercase font-medium tracking-widest  bg-primary text-white px-6 py-4 hover:bg-black/80 transition-colors cursor-pointer">
-                Enviar
+                Consultar
               </button>
             )}
           </div>

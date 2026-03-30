@@ -101,7 +101,14 @@ const Contacto = () => {
                   </svg>
                 </div>
 
-                <p>Ituzaingó 856, Zarate. Pcia. de Bs. As.</p>
+                <a
+                  href="https://maps.app.goo.gl/Z1R2GZamCczbqsyn8"
+                  className="underline"
+                  target="_blank"
+                  rel="noopener  noreferrer"
+                >
+                  Ituzaingó 856, Zarate. Pcia. de Bs. As.
+                </a>
               </li>
             </ul>
           </div>
