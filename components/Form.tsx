@@ -6,7 +6,7 @@ import axios, { AxiosError } from "axios";
 import Input from "./input";
 import Loader from "./loader";
 import { FieldError } from "react-hook-form";
-import { useInView } from "react-intersection-observer";
+// import { useInView } from "react-intersection-observer";
 
 interface Form {
   name: string;
@@ -26,10 +26,10 @@ const Error = ({ error }: ErrorProps) => {
 };
 
 const Form = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: false,
-    threshold: 0.2,
-  });
+  // const [ref, inView] = useInView({
+  //   triggerOnce: false,
+  //   threshold: 0.2,
+  // });
 
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
@@ -77,7 +77,7 @@ const Form = () => {
 
   if (sended) {
     return (
-      <section id="form" ref={ref}>
+      <section id="form">
         <Container styles="py-20 flex flex-col lg:items-center gap-y-20">
           <h1 className="px-8 py-6 border border-primary text-semibold text-xl lg:text-2xl tracking-widest uppercase inline">
             Reservas / Consultas
@@ -92,16 +92,16 @@ const Form = () => {
   }
 
   return (
-    <section id="form" ref={ref}>
+    <section id="form">
       <Container styles="py-20 flex flex-col lg:items-center gap-y-20">
-        <div className={`opacity-0 ${inView ? "animate-fade-right" : ""}`}>
+        <div>
           <h1 className="px-8 py-6 border border-primary text-semibold text-xl lg:text-2xl tracking-widest uppercase inline">
             Reservas / Consultas
           </h1>
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className={`flex flex-col gap-y-4 w-full max-w-2xl text-sm mx-auto ${inView ? "animate-fade-right" : ""}`}
+          className={`flex flex-col gap-y-4 w-full max-w-2xl text-sm mx-auto`}
         >
           <div className="flex flex-col gap-2">
             <div className="uppercase font-bold tracking-widest w-1/3">
@@ -170,8 +170,11 @@ const Form = () => {
             {sending ? (
               <Loader />
             ) : (
-              <button className="uppercase font-medium tracking-widest  bg-primary text-white px-6 py-4 hover:bg-black/80 transition-colors cursor-pointer">
-                Consultar
+              <button
+                type="submit"
+                className="uppercase font-medium tracking-widest  bg-primary text-white px-6 py-4 hover:bg-black/80 transition-colors cursor-pointer"
+              >
+                Enviar
               </button>
             )}
           </div>
