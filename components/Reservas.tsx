@@ -8,13 +8,22 @@ const Reservas = () => {
     threshold: 0.3,
   });
 
+  const handleScroll = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="bg-primary text-white" id="reservas" ref={ref}>
       <Container styles="py-20 flex flex-col items-start lg:flex-row gap-x-20 gap-y-8">
         <div className={`opacity-0 ${inView ? "animate-fade-right" : ""}`}>
-          <h1 className="px-8 py-6 border border-white text-semibold text-xl lg:text-2xl tracking-widest uppercase">
+          <button
+            className="px-8 py-6 border border-white text-semibold text-xl lg:text-2xl tracking-widest uppercase cursor-pointer hover:text-black/90 hover:border-black/90"
+            onClick={() => handleScroll("form")}
+          >
             Reservas
-          </h1>
+          </button>
         </div>
         <div
           className={`opacity-0 text-sm flex flex-col gap-y-2 ${inView ? "animate-fade-left" : ""}`}

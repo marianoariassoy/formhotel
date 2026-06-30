@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Container from "./Container";
 import Nav from "./Nav";
 import NavMobile from "./NavMobile";
+import Whatsapp from "./WhatsApp";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -60,6 +61,8 @@ const Header = () => {
         setMenuOpen={setMenuOpen}
         menuOpen={menuOpen}
       />
+
+      <Whatsapp />
     </>
   );
 };
